@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-light: #eaeeed;
+    --bg-light-2: #f5f4f0;
+    --bg-mint-pale: #d5ede4;
+    --bg-dark-green: #1f4638;
+    --mint-accent: #68e9ba;
+    --mint-hover: #52d9a7;
+    --text-dark: #39413e;
+    --text-muted: #75736b;
+    --text-green: #1d7a58;
+    --card-bg-light: #ffffff;
+    --border-light: rgba(57, 65, 62, 0.12);
+    --border-dark: rgba(255, 255, 255, 0.15);
+  }
+
+  body {
+    background-color: var(--bg-light-2);
+    color: var(--text-dark);
+    font-family: var(--font-sans), Arial, Helvetica, system-ui, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans), Arial, Helvetica, system-ui, sans-serif;
+    font-weight: 700;
+  }
+}
+
+/* Elegant Italic Serif for accented words */
+.font-serif-accent {
+  font-family: var(--font-serif), Georgia, 'Times New Roman', serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f4f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f4638;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #143227;
+}
+
+/* Ticker Marquee Animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Button Styles */
+.btn-webflow-mint {
+  background-color: #68e9ba;
+  color: #1f4638;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-webflow-mint:hover {
+  background-color: #52d9a7;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(104, 233, 186, 0.35);
+}
+
+/* Link Underline Hover */
+.link-hover-line {
+  position: relative;
+}
+
+.link-hover-line::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #1d7a58;
+  transition: width 0.3s ease;
+}
+
+.link-hover-line:hover::after {
+  width: 100%;
+}
+
+/* Line clamp utilities */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
