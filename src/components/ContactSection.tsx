@@ -29,7 +29,7 @@ export default function ContactSection() {
   const loc = locations[locationIdx];
 
   return (
-    <section id="contact" className="py-20 bg-[#eaeeed]">
+    <section id="contact" className="py-20 bg-[#1f4638] rounded-b-[36px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Dark green rounded card */}
         <motion.div
@@ -37,7 +37,7 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-[#1f4638] rounded-3xl p-10 sm:p-14 grid grid-cols-1 lg:grid-cols-2 gap-12"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
           {/* Left: title + location */}
           <div>
