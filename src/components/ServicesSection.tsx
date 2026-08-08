@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -42,31 +43,42 @@ export default function ServicesSection() {
             <div className="flex flex-col border-t border-gray-200" onMouseLeave={() => setHoveredService(null)}>
               {servicesList.map((service) => {
                 const isHovered = hoveredService === service.id;
+                const isActive = activeService === service.id;
                 return (
-                  <div
+                  <Link
                     key={service.id}
+                    href="#contact"
                     onMouseEnter={() => {
                       setActiveService(service.id);
                       setHoveredService(service.id);
                     }}
-                    className={`group cursor-pointer border-b border-gray-200 py-6 px-4 flex items-center justify-between transition-all duration-300 ${isHovered
+                    className={`group cursor-pointer border-b border-gray-200 py-6 px-4 flex items-center justify-between transition-all duration-300 ${
+                      isActive || isHovered
                         ? 'bg-gradient-to-r from-[#68e9ba]/25 to-transparent'
                         : 'bg-transparent'
-                      }`}
+                    }`}
                   >
-                    <h3 className="text-[20px] font-semibold text-[#39413e]">{service.title}</h3>
-                    {isHovered && (
-                      <motion.div
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="text-[#39413e]"
-                      >
-                        <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
-                      </motion.div>
-                    )}
-                  </div>
+                    <h3 className={`text-[20px] font-semibold transition-colors ${isActive ? 'text-[#1d7a58]' : 'text-[#39413e]'}`}>
+                      {service.title}
+                    </h3>
+                    <motion.div
+                      animate={{ x: isHovered ? 4 : 0 }}
+                      className="text-[#1d7a58]"
+                    >
+                      <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
+                    </motion.div>
+                  </Link>
                 );
               })}
+            </div>
+
+            <div className="mt-8">
+              <Link
+                href="#contact"
+                className="btn-webflow-mint inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all"
+              >
+                Inquire About {servicesList.find((s) => s.id === activeService)?.title || 'Services'} <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
 

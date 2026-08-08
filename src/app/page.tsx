@@ -5,8 +5,7 @@ import KeyPillars from '@/components/KeyPillars';
 import TeamSection from '@/components/TeamSection';
 import ServicesSection from '@/components/ServicesSection';
 import PricingSection from '@/components/PricingSection';
-import StatsSection from '@/components/StatsSection';
-import ContactSection from '@/components/ContactSection';
+import StatsAndContactSection from '@/components/StatsAndContactSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
@@ -19,7 +18,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen antialiased">
+    <main className="min-h-screen antialiased bg-white">
       {/* 1. Navigation Bar */}
       <Navbar />
 
@@ -35,22 +34,19 @@ export default function Home() {
       {/* 5. Explore Our Best Services - Bold left text + right photo accordion */}
       <ServicesSection />
 
-      {/* 6. Pricing Solutions - Mint green bg, tab selector */}
+      {/* 6. Pricing Solutions for Success (Part 1 of Pricing) */}
       <PricingSection />
 
-      {/* 7. Stats & World Map - Dark green bg */}
-      <StatsSection />
+      {/* 7. World Map, 4 Stats Counters & Contact Consultant W */}
+      <StatsAndContactSection />
 
-      {/* 8. Contact & Locations - Dark green rounded card */}
-      <ContactSection />
-
-      {/* 9. Client Testimonials - Mint green bg, center quote slider */}
+      {/* 8. What They Say About Us (Part 2: Client Testimonials) */}
       <TestimonialsSection />
 
-      {/* 10. Blog & Insights - Featured + side articles */}
+      {/* 9. Blog & Insights - Featured + side articles */}
       <BlogSection />
 
-      {/* 11. Footer - Dark green + mint CTA card */}
+      {/* 10. Footer - Dark green + mint CTA card */}
       <Footer />
     </main>
   );
