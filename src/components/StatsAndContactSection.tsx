@@ -106,24 +106,24 @@ function AnimatedCounter({
 
 const stats: StatItem[] = [
   {
-    value: 20,
-    suffix: 'k+',
-    label: 'Happy customers worldwide',
+    value: 500,
+    suffix: '+',
+    label: 'Corporate & SME Clients Audited',
   },
   {
-    value: 12,
+    value: 15,
     suffix: '+',
-    label: 'Years of work experience',
+    label: 'Years of Tax & Financial Excellence',
   },
   {
-    value: 50,
-    suffix: '+',
-    label: 'Creativity & passionate members',
+    value: 99,
+    suffix: '%',
+    label: 'Tax Filing Accuracy & Compliance Rate',
   },
   {
-    value: 200,
+    value: 1000,
     suffix: '+',
-    label: 'Successfully finished projects',
+    label: 'Successful Tax & Audit Filings',
   },
 ];
 
@@ -173,16 +173,16 @@ const locations: LocationItem[] = [
     address: '14 Tottenham Road, London, England',
     mapLink:
       'https://www.google.com/maps/d/u/0/viewer?ie=UTF8&hl=en&msa=0&z=22&mid=14jEeIQ7yyKK7iih9Sl_AjR7jZf0&ll=51.545544000014615%2C-0.07610839999999452',
-    phone: '+1 212 425 8617',
-    email: 'hello@consultant_w.com',
+    phone: '+44 20 7946 0912',
+    email: 'info@rafaandcompany.com',
   },
   {
     country: 'Paris',
-    address: '25 Rueng de Berri, Paris, France',
+    address: '25 Rue de Berri, Paris, France',
     mapLink:
       'https://www.google.com/maps/d/u/0/viewer?ie=UTF8&hl=en&msa=0&z=22&mid=14jEeIQ7yyKK7iih9Sl_AjR7jZf0&ll=51.545544000014615%2C-0.07610839999999452',
-    phone: '+1 212 425 8617',
-    email: 'hello@consultant_w.com',
+    phone: '+33 1 42 68 55 00',
+    email: 'info@rafaandcompany.com',
   },
   {
     country: 'New York',
@@ -190,7 +190,7 @@ const locations: LocationItem[] = [
     mapLink:
       'https://www.google.com/maps/d/u/0/viewer?ie=UTF8&hl=en&msa=0&z=22&mid=14jEeIQ7yyKK7iih9Sl_AjR7jZf0&ll=51.545544000014615%2C-0.07610839999999452',
     phone: '+1 212 425 8617',
-    email: 'hello@consultant_w.com',
+    email: 'info@rafaandcompany.com',
   },
 ];
 
@@ -279,7 +279,7 @@ export default function StatsAndContactSection() {
                 x: [0, 20, 0],
                 y: [0, -30, 0],
                 scale: [1, 1.12, 1],
-                opacity: [0.12, 0.2, 0.12],
+                opacity: [0.15, 0.2, 0.15],
               }}
               transition={{
                 duration: 10,
@@ -309,7 +309,7 @@ export default function StatsAndContactSection() {
               MAP SECTION
           ================================================= */}
 
-          <div className="relative w-full px-4 pb-10 pt-8 sm:px-8 sm:pb-12 sm:pt-10">
+          {/* <div className="relative w-full px-4 pb-10 pt-8 sm:px-8 sm:pb-12 sm:pt-10">
             <div className="mx-auto w-full max-w-[1200px]">
               <div
                 className="relative mx-auto h-[300px] w-full bg-contain bg-center bg-no-repeat sm:h-[430px] lg:h-[520px]"
@@ -317,10 +317,10 @@ export default function StatsAndContactSection() {
                   backgroundImage:
                     'url("https://cdn.prod.website-files.com/656363843a32e4fa57eb52d1/6567543225bddbde94882c50_mapbase.svg")',
                 }}
-              >
+              > */}
                 {/* MAP MARKERS */}
 
-                <div className="absolute inset-0">
+                {/* <div className="absolute inset-0">
                   {mapCircles.map((circle) => (
                     <div
                       key={circle.id}
@@ -330,10 +330,10 @@ export default function StatsAndContactSection() {
                         left: circle.left,
                         transform: 'translate(-50%, -50%)',
                       }}
-                    >
+                    > */}
                       {/* Pulse */}
 
-                      <span
+                      {/* <span
                         className={
                           circle.mini
                             ? 'absolute left-1/2 top-1/2 h-[22px] w-[22px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#68e9ba]/20'
@@ -343,10 +343,10 @@ export default function StatsAndContactSection() {
                           animation: 'mapPing 2.8s ease-out infinite',
                           animationDelay: `${circle.delay}s`,
                         }}
-                      />
+                      /> */}
 
                       {/* Center Dot */}
-
+{/* 
                       <span
                         className={
                           circle.mini
@@ -363,7 +363,7 @@ export default function StatsAndContactSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* =================================================
               DIVIDER
@@ -375,8 +375,8 @@ export default function StatsAndContactSection() {
               STATS
           ================================================= */}
 
-          <div className="relative mx-auto w-full max-w-[1200px] px-6 py-12 sm:px-8 sm:py-14 lg:py-16">
-            <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-4 lg:gap-8">
+          <div className="relative mx-auto w-full max-w-[1200px] px-6 py-10 sm:px-8 sm:py-12 lg:py-14">
+            <div className="grid grid-cols-2 gap-x-6 gap-y-10 lg:grid-cols-4 lg:gap-8">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -398,7 +398,7 @@ export default function StatsAndContactSection() {
                   }}
                   className="flex flex-col items-start"
                 >
-                  <div className="text-[48px] font-normal leading-none tracking-tight text-white sm:text-[60px] lg:text-[70px]">
+                  <div className="text-4xl font-medium leading-none tracking-tight text-white sm:text-5xl lg:text-6xl">
                     <AnimatedCounter
                       target={stat.value}
                       prefix={stat.prefix}
@@ -406,7 +406,7 @@ export default function StatsAndContactSection() {
                     />
                   </div>
 
-                  <p className="mt-4 max-w-[190px] text-sm leading-relaxed text-[#9ecfb8] sm:text-base">
+                  <p className="mt-3 max-w-[190px] text-xs sm:text-sm leading-relaxed text-[#9ecfb8] font-normal">
                     {stat.label}
                   </p>
                 </motion.div>
@@ -426,9 +426,9 @@ export default function StatsAndContactSection() {
 
           <div
             id="contact"
-            className="relative px-6 py-14 sm:px-10 sm:py-16 lg:px-16 lg:py-20"
+            className="relative px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16"
           >
-            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-20">
+            <div className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
 
               {/* =============================================
                   LEFT SIDE
@@ -452,12 +452,12 @@ export default function StatsAndContactSection() {
                   transition={{
                     duration: 0.6,
                   }}
-                  className="text-[36px] font-bold leading-[1.1] tracking-tight text-white sm:text-[48px]"
+                  className="text-2xl font-semibold leading-tight tracking-tight text-white sm:text-3xl lg:text-4xl"
                 >
                   <span className="font-normal italic text-[#68e9ba]">
-                    Contact Consultant W
+                    Contact Rafa & Company
                   </span>{' '}
-                  for Strategic Insights
+                  for Financial Advisory
                 </motion.h2>
 
                 {/* DESCRIPTION */}
@@ -478,16 +478,14 @@ export default function StatsAndContactSection() {
                     duration: 0.6,
                     delay: 0.1,
                   }}
-                  className="mt-6 max-w-xl text-base leading-relaxed text-[#9ecfb8] sm:text-lg"
+                  className="mt-4 max-w-xl text-sm sm:text-base leading-relaxed text-[#9ecfb8] font-normal"
                 >
-                  Your journey to strategic excellence begins here.
-                  Contact us to tap into a wealth of consulting expertise
-                  and take your business to new heights.
+                  Take control of your tax compliance, statutory auditing, and strategic financial growth. Reach out to our Chartered Accountants today for expert advice.
                 </motion.p>
 
                 {/* DIVIDER */}
 
-                <div className="my-8 h-px w-full bg-[#2e5f4a]" />
+                <div className="my-6 h-px w-full bg-[#2e5f4a]" />
 
                 {/* =========================================
                     LOCATION
@@ -515,7 +513,7 @@ export default function StatsAndContactSection() {
                         transition={{
                           duration: 0.25,
                         }}
-                        className="text-xl font-semibold text-white sm:text-2xl"
+                        className="text-lg font-semibold text-white sm:text-xl"
                       >
                         {currentLocation.country}
                       </motion.h4>
@@ -528,18 +526,18 @@ export default function StatsAndContactSection() {
                         type="button"
                         onClick={previousSlide}
                         aria-label="Previous location"
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#4a7d68] text-white transition-all hover:border-[#68e9ba] hover:bg-[#2e5f4a]"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-[#4a7d68] text-white transition-all hover:border-[#68e9ba] hover:bg-[#2e5f4a]"
                       >
-                        <ChevronLeft className="h-5 w-5" />
+                        <ChevronLeft className="h-4 w-4" />
                       </button>
 
                       <button
                         type="button"
                         onClick={nextSlide}
                         aria-label="Next location"
-                        className="flex h-10 w-10 items-center justify-center rounded-full border border-[#4a7d68] text-white transition-all hover:border-[#68e9ba] hover:bg-[#2e5f4a]"
+                        className="flex h-9 w-9 items-center justify-center rounded-full border border-[#4a7d68] text-white transition-all hover:border-[#68e9ba] hover:bg-[#2e5f4a]"
                       >
-                        <ChevronRight className="h-5 w-5" />
+                        <ChevronRight className="h-4 w-4" />
                       </button>
                     </div>
                   </div>
@@ -564,18 +562,18 @@ export default function StatsAndContactSection() {
                       transition={{
                         duration: 0.25,
                       }}
-                      className="mt-6 space-y-4"
+                      className="mt-5 space-y-3"
                     >
                       {/* ADDRESS */}
 
                       <div className="flex items-start gap-3">
-                        <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-[#68e9ba]" />
+                        <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#68e9ba]" />
 
                         <a
                           href={currentLocation.mapLink}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm leading-relaxed text-[#9ecfb8] transition-colors hover:text-white sm:text-base"
+                          className="text-xs sm:text-sm leading-relaxed text-[#9ecfb8] transition-colors hover:text-white font-normal"
                         >
                           {currentLocation.address}
                         </a>
@@ -584,14 +582,14 @@ export default function StatsAndContactSection() {
                       {/* PHONE */}
 
                       <div className="flex items-center gap-3">
-                        <Phone className="h-5 w-5 shrink-0 text-[#68e9ba]" />
+                        <Phone className="h-4 w-4 shrink-0 text-[#68e9ba]" />
 
                         <a
                           href={`tel:${currentLocation.phone.replace(
                             /\s+/g,
                             ''
                           )}`}
-                          className="text-sm text-[#9ecfb8] transition-colors hover:text-white sm:text-base"
+                          className="text-xs sm:text-sm text-[#9ecfb8] transition-colors hover:text-white font-normal"
                         >
                           {currentLocation.phone}
                         </a>
@@ -600,11 +598,11 @@ export default function StatsAndContactSection() {
                       {/* EMAIL */}
 
                       <div className="flex items-center gap-3">
-                        <Mail className="h-5 w-5 shrink-0 text-[#68e9ba]" />
+                        <Mail className="h-4 w-4 shrink-0 text-[#68e9ba]" />
 
                         <a
                           href={`mailto:${currentLocation.email}`}
-                          className="text-sm text-[#9ecfb8] transition-colors hover:text-white sm:text-base"
+                          className="text-xs sm:text-sm text-[#9ecfb8] transition-colors hover:text-white font-normal"
                         >
                           {currentLocation.email}
                         </a>
@@ -636,7 +634,7 @@ export default function StatsAndContactSection() {
                       duration: 0.6,
                     }}
                     onSubmit={handleSubmit}
-                    className="space-y-6"
+                    className="space-y-5"
                   >
                     {/* NAME */}
 
@@ -652,7 +650,7 @@ export default function StatsAndContactSection() {
                           name: e.target.value,
                         })
                       }
-                      className="w-full border-0 border-b border-[#4a7d68] bg-transparent px-0 py-4 text-sm text-white outline-none transition-colors placeholder:text-[#78a892] focus:border-[#68e9ba] sm:text-base"
+                      className="w-full border-0 border-b border-[#4a7d68] bg-transparent px-0 py-3 text-xs sm:text-sm text-white outline-none transition-colors placeholder:text-[#78a892] focus:border-[#68e9ba]"
                     />
 
                     {/* EMAIL */}
@@ -669,7 +667,7 @@ export default function StatsAndContactSection() {
                           email: e.target.value,
                         })
                       }
-                      className="w-full border-0 border-b border-[#4a7d68] bg-transparent px-0 py-4 text-sm text-white outline-none transition-colors placeholder:text-[#78a892] focus:border-[#68e9ba] sm:text-base"
+                      className="w-full border-0 border-b border-[#4a7d68] bg-transparent px-0 py-3 text-xs sm:text-sm text-white outline-none transition-colors placeholder:text-[#78a892] focus:border-[#68e9ba]"
                     />
 
                     {/* MESSAGE */}
@@ -686,16 +684,16 @@ export default function StatsAndContactSection() {
                           message: e.target.value,
                         })
                       }
-                      className="w-full resize-none border-0 border-b border-[#4a7d68] bg-transparent px-0 py-4 text-sm text-white outline-none transition-colors placeholder:text-[#78a892] focus:border-[#68e9ba] sm:text-base"
+                      className="w-full resize-none border-0 border-b border-[#4a7d68] bg-transparent px-0 py-3 text-xs sm:text-sm text-white outline-none transition-colors placeholder:text-[#78a892] focus:border-[#68e9ba]"
                     />
 
                     {/* BUTTON */}
 
-                    <div className="pt-5">
+                    <div className="pt-4">
                       <button
                         type="submit"
                         disabled={loading}
-                        className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-bold text-[#1f4638] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#68e9ba] disabled:cursor-not-allowed disabled:opacity-70"
+                        className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-xs sm:text-sm font-semibold text-[#1f4638] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#68e9ba] disabled:cursor-not-allowed disabled:opacity-70"
                       >
                         {loading ? (
                           <>

@@ -11,9 +11,9 @@ import BlogSection from '@/components/BlogSection';
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'Consultant W - Strategic Advisory & Business Consulting',
+  title: 'Rafa & Company - Chartered Accountants & Financial Advisory',
   description:
-    'At Consultant W, we embrace innovation as the driving force behind every solution. Premium business consulting services for your growth.',
+    'Comprehensive tax planning, statutory auditing, GST compliance, and strategic Virtual CFO services by experienced Chartered Accountants.',
 };
 
 export default function Home() {
@@ -35,7 +35,7 @@ export default function Home() {
       <ServicesSection />
 
       {/* 6. Pricing Solutions for Success (Part 1 of Pricing) */}
-      <PricingSection />
+      {/* <PricingSection /> */}
 
       {/* 7. World Map, 4 Stats Counters & Contact Consultant W */}
       <StatsAndContactSection />

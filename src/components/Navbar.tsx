@@ -56,7 +56,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-white/97 backdrop-blur-md border-b border-gray-200 py-3 shadow-sm'
+            ? 'bg-white/97 backdrop-blur-md py-3 shadow-sm'
             : 'bg-transparent py-5'
         }`}
       >
@@ -65,20 +65,22 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-1 group">
             <span className={`text-2xl font-bold tracking-tight transition-colors duration-300 ${
               scrolled ? 'text-[#39413e]' : 'text-white'
-            }`}>
-              Consultant
+            } `}>
+              Rafa <span className="text-2xl text-[#1f4638] ml-0.5">
+              &
+            </span>  Company
             </span>
-            <span className="text-2xl font-serif-accent font-bold italic text-[#68e9ba] ml-0.5">
-              W
-            </span>
+            {/* <span className="text-2xl font-serif-accent font-bold italic text-[#68e9ba] ml-0.5">
+              COMPANY
+            </span> */}
           </Link>
 
           {/* Desktop Navigation Links */}
           <nav className={`hidden md:flex items-center gap-8 text-sm font-semibold transition-colors duration-300 ${
-            scrolled ? 'text-[#39413e]' : 'text-white'
-          }`}>
+              scrolled ? 'text-[#39413e]' : 'text-white '
+            }`}>
             {/* Demos Dropdown */}
-            <div
+            {/* <div
               className="relative py-2"
               onMouseEnter={() => setDemosOpen(true)}
               onMouseLeave={() => setDemosOpen(false)}
@@ -124,38 +126,44 @@ export default function Navbar() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </div> */}
 
-            <Link href="#services" className={`transition-colors link-hover-line ${
-              scrolled ? 'text-[#39413e] hover:text-[#1d7a58]' : 'text-white hover:text-[#68e9ba]'
-            }`}>
+            <Link href="/" className={`transition-colors link-hover-line hover:text-[#1d7a58]`}>
+              Home
+            </Link>
+
+            <Link href="/about" className={`transition-colors link-hover-line hover:text-[#1d7a58]`}>
+              About
+            </Link>
+
+            <Link href="/services" className={`transition-colors link-hover-line hover:text-[#1d7a58]`}>
               Services
             </Link>
 
-            <Link href="#pricing" className={`transition-colors link-hover-line ${
-              scrolled ? 'text-[#39413e] hover:text-[#1d7a58]' : 'text-white hover:text-[#68e9ba]'
-            }`}>
-              Pricing
+            <Link href="/team" className={`transition-colors link-hover-line hover:text-[#1d7a58]`}>
+              Our Team
             </Link>
 
-            <Link href="#blog" className={`transition-colors link-hover-line ${
-              scrolled ? 'text-[#39413e] hover:text-[#1d7a58]' : 'text-white hover:text-[#68e9ba]'
-            }`}>
-              Blog
+            <Link href="/careers" className={`transition-colors link-hover-line hover:text-[#1d7a58]`}>
+              Careers
+            </Link>
+
+            <Link href="/contact" className={`transition-colors link-hover-line hover:text-[#1d7a58]`}>
+              Contact us
             </Link>
 
             {/* All Pages Multi-Column Mega Menu */}
-            <div
+            {/* <div
               className="relative py-2"
               onMouseEnter={() => setPagesOpen(true)}
               onMouseLeave={() => setPagesOpen(false)}
-            >
-              <button className={`flex items-center gap-1 transition-colors py-1 link-hover-line ${
+            > */}
+              {/* <button className={`flex items-center gap-1 transition-colors py-1 link-hover-line ${
                 scrolled ? 'text-[#39413e] hover:text-[#1d7a58]' : 'text-white hover:text-[#68e9ba]'
               }`}>
                 All Pages <ChevronDown className="w-4 h-4 opacity-70" />
-              </button>
-              <AnimatePresence>
+              </button> */}
+              {/* <AnimatePresence>
                 {pagesOpen && (
                   <motion.div
                     initial={{ opacity: 0, y: 12, scale: 0.98 }}
@@ -163,9 +171,9 @@ export default function Navbar() {
                     exit={{ opacity: 0, y: 8, scale: 0.98 }}
                     transition={{ duration: 0.2 }}
                     className="absolute top-full -right-20 w-[680px] bg-white border border-gray-100 rounded-2xl shadow-2xl p-6 z-50 grid grid-cols-3 gap-6 text-[#39413e]"
-                  >
+                  > */}
                     {/* Column 1: Main Pages */}
-                    <div className="space-y-2">
+                    {/* <div className="space-y-2">
                       <h4 className="text-xs font-bold uppercase tracking-wider text-[#1d7a58] pb-1 border-b border-gray-100">
                         Main Pages
                       </h4>
@@ -189,10 +197,10 @@ export default function Navbar() {
                           Pricing Plans
                         </Link>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Column 2: Inner & Content Pages */}
-                    <div className="space-y-2">
+                    {/* <div className="space-y-2">
                       <h4 className="text-xs font-bold uppercase tracking-wider text-[#1d7a58] pb-1 border-b border-gray-100">
                         Inner Pages
                       </h4>
@@ -213,10 +221,10 @@ export default function Navbar() {
                           Contact Consultant W
                         </Link>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Column 3: E-Commerce & Utilities */}
-                    <div className="space-y-2">
+                    {/* <div className="space-y-2">
                       <h4 className="text-xs font-bold uppercase tracking-wider text-[#1d7a58] pb-1 border-b border-gray-100">
                         Shop & Utility
                       </h4>
@@ -247,16 +255,15 @@ export default function Navbar() {
                           Licensing & Copyright
                         </Link>
                       </div>
-                    </div>
-                  </motion.div>
+                    </div> */}
+                  {/* </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </div> */}
           </nav>
 
           {/* Right Action Icons & CTA Button */}
-          <div className="hidden md:flex items-center gap-5">
-            {/* Cart Icon Button */}
+          {/* <div className="hidden md:flex items-center gap-5">
             <button
               onClick={() => setCartOpen(true)}
               className={`relative p-2 transition-colors ${
@@ -271,15 +278,13 @@ export default function Navbar() {
                 </span>
               )}
             </button>
-
-            {/* Get a Quote CTA Button */}
             <button
               onClick={() => setQuoteModalOpen(true)}
               className="btn-webflow-mint px-6 py-2.5 text-sm font-semibold flex items-center gap-2 cursor-pointer shadow-md hover:shadow-lg transition-all"
             >
               Get a quote now
             </button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center gap-3 md:hidden">
@@ -310,28 +315,22 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-3 text-[#39413e] text-base font-medium">
               <div className="text-xs font-bold uppercase text-[#1d7a58]">Pages</div>
-              <Link href="#" onClick={() => setMobileMenuOpen(false)} className="text-[#1d7a58] font-bold">
-                Home 3 (Active)
+              <Link href="/" onClick={() => setMobileMenuOpen(false)}>
+                Home
               </Link>
-              <Link href="#about" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/about" onClick={() => setMobileMenuOpen(false)}>
                 About Us
               </Link>
-              <Link href="#services" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/services" onClick={() => setMobileMenuOpen(false)}>
                 Services
               </Link>
-              <Link href="#team" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/team" onClick={() => setMobileMenuOpen(false)}>
                 Our Team
               </Link>
-              <Link href="#pricing" onClick={() => setMobileMenuOpen(false)}>
-                Pricing
+              <Link href="/careers" onClick={() => setMobileMenuOpen(false)}>
+                Careers
               </Link>
-              <Link href="#testimonials" onClick={() => setMobileMenuOpen(false)}>
-                Testimonials
-              </Link>
-              <Link href="#blog" onClick={() => setMobileMenuOpen(false)}>
-                Blog
-              </Link>
-              <Link href="#contact" onClick={() => setMobileMenuOpen(false)}>
+              <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
                 Contact Us
               </Link>
               <div className="pt-4 border-t border-gray-100 flex flex-col gap-2">

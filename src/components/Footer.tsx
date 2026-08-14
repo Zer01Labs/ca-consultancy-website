@@ -26,10 +26,10 @@ const photoItemVariants: Variants = {
 };
 
 const smallPhotos = [
-  'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=500&q=80',
   'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=500&q=80',
-  'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=500&q=80',
-  'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=500&q=80',
+  'https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=500&q=80',
 ];
 
 export default function Footer() {
@@ -50,13 +50,13 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl sm:text-5xl lg:text-[64px] font-normal leading-[1.12] tracking-[-0.02em] max-w-4xl text-white"
+          className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight max-w-3xl text-white"
         >
-          Turn Your Vision Into Reality.
+          Secure Your Financial Future.
           <br />
-          Let's Reinvent{' '}
-          <span className="font-serif-accent font-medium italic text-[#68e9ba]">
-            Success Together!
+          Let's Empower{' '}
+          <span className="font-serif-accent font-normal italic text-[#68e9ba]">
+            Your Growth Together!
           </span>
         </motion.h2>
 
@@ -68,35 +68,41 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-12 sm:mt-16 flex flex-col md:flex-row md:items-center justify-between gap-6"
+          className="mt-10 sm:mt-14 flex flex-col md:flex-row md:items-center justify-between gap-6"
         >
-          <nav className="flex flex-wrap items-center gap-6 sm:gap-10 text-sm sm:text-base font-semibold text-white/90">
+          <nav className="flex flex-wrap items-center gap-5 sm:gap-8 text-xs sm:text-sm font-medium text-white/90">
             <Link
-              href="#"
+              href="/"
               className="transition-colors duration-200 hover:text-[#68e9ba]"
             >
               Home
             </Link>
             <Link
-              href="#pricing"
+              href="/about"
               className="transition-colors duration-200 hover:text-[#68e9ba]"
             >
-              Our Pricing
+              About Us
             </Link>
             <Link
-              href="#blog"
+              href="/services"
               className="transition-colors duration-200 hover:text-[#68e9ba]"
             >
-              Blog
+              Services
             </Link>
             <Link
-              href="#"
+              href="/team"
               className="transition-colors duration-200 hover:text-[#68e9ba]"
             >
-              Shop
+              Our Team
             </Link>
             <Link
-              href="#contact"
+              href="/careers"
+              className="transition-colors duration-200 hover:text-[#68e9ba]"
+            >
+              Careers
+            </Link>
+            <Link
+              href="/contact"
               className="transition-colors duration-200 hover:text-[#68e9ba]"
             >
               Contact Us
@@ -151,7 +157,7 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/80 hover:text-[#1f4638] hover:bg-[#68e9ba] hover:border-[#68e9ba] transition-all duration-300 hover:scale-105"
+                className="w-9 h-9 rounded-xl bg-white/10 border border-white/10 flex items-center justify-center text-white/80 hover:text-[#1f4638] hover:bg-[#68e9ba] hover:border-[#68e9ba] transition-all duration-300 hover:scale-105"
               >
                 {social.icon}
               </a>
@@ -167,7 +173,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-          className="my-12 sm:my-16 lg:my-20 rounded-[32px] sm:rounded-[44px] bg-[#68e9ba] p-6 sm:p-10 lg:p-14 text-[#1f4638] shadow-2xl"
+          className="my-10 sm:my-14 lg:my-16 rounded-[28px] sm:rounded-[36px] bg-[#68e9ba] p-6 sm:p-9 lg:p-12 text-[#1f4638] shadow-xl"
         >
           <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-8 lg:gap-14 items-center">
             {/* Left: Photo collage grid with Image Dimming & Centered Glass Instagram Badge */}
@@ -185,7 +191,7 @@ export default function Footer() {
                 onMouseLeave={() => setHoveredCard(null)}
                 onClick={openInstagram}
                 whileHover={{ scale: 1.02 }}
-                className="group relative min-h-[300px] sm:h-[350px] w-full sm:w-[50%] overflow-hidden rounded-[28px] sm:rounded-[32px] bg-[#53cb9f] cursor-pointer"
+                className="group relative min-h-[280px] sm:h-[320px] w-full sm:w-[50%] overflow-hidden rounded-[24px] sm:rounded-[28px] bg-[#53cb9f] cursor-pointer"
               >
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
@@ -207,10 +213,10 @@ export default function Footer() {
                         : { scale: 0.5, opacity: 0, rotate: -20 }
                     }
                     transition={{ type: 'spring', stiffness: 350, damping: 20 }}
-                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 backdrop-blur-md border border-white/50 flex items-center justify-center text-white shadow-2xl"
+                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/50 flex items-center justify-center text-white shadow-2xl"
                   >
                     <svg
-                      className="w-7 h-7 sm:w-8 sm:h-8"
+                      className="w-6 h-6 sm:w-7 sm:h-7"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -221,7 +227,7 @@ export default function Footer() {
               </motion.div>
 
               {/* 4 Small Square/Portrait Photos in 2x2 Grid */}
-              <div className="grid grid-cols-2 gap-3.5 w-full sm:w-[50%] h-[350px]">
+              <div className="grid grid-cols-2 gap-3 w-full sm:w-[50%] h-[320px]">
                 {smallPhotos.map((imgUrl, i) => (
                   <motion.div
                     key={i}
@@ -230,7 +236,7 @@ export default function Footer() {
                     onMouseLeave={() => setHoveredCard(null)}
                     onClick={openInstagram}
                     whileHover={{ scale: 1.04 }}
-                    className="group overflow-hidden rounded-[20px] bg-[#53cb9f] h-full relative cursor-pointer"
+                    className="group overflow-hidden rounded-[18px] bg-[#53cb9f] h-full relative cursor-pointer"
                   >
                     <img
                       src={imgUrl}
@@ -258,10 +264,10 @@ export default function Footer() {
                           stiffness: 350,
                           damping: 20,
                         }}
-                        className="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-white/10 backdrop-blur-md border border-white/50 flex items-center justify-center text-white shadow-xl"
+                        className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/10 backdrop-blur-md border border-white/50 flex items-center justify-center text-white shadow-xl"
                       >
                         <svg
-                          className="w-5 h-5 sm:w-6 sm:h-6"
+                          className="w-4 h-4 sm:w-5 sm:h-5"
                           fill="currentColor"
                           viewBox="0 0 24 24"
                         >
@@ -282,15 +288,14 @@ export default function Footer() {
               transition={{ duration: 0.7, delay: 0.15 }}
               className="flex flex-col justify-center"
             >
-              <h3 className="text-3xl sm:text-4xl lg:text-[42px] font-normal leading-[1.15] tracking-tight text-[#1f4638]">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-semibold leading-tight tracking-tight text-[#1f4638]">
                 Book Your Consultation
                 <br />
-                with Consultant W!
+                with Rafa & Company!
               </h3>
 
-              <p className="mt-4 text-base sm:text-[17px] leading-relaxed text-[#1f4638]/85 max-w-lg">
-                At Consultant W, we redefine consultancy through a dynamic
-                fusion of innovation, expertise, and strategic vision.
+              <p className="mt-3.5 text-xs sm:text-sm leading-relaxed text-[#1f4638]/85 max-w-md font-normal">
+                At Rafa & Company, we deliver premier financial, tax, and auditing advisory built on integrity, technical rigor, and strategic growth.
               </p>
 
               {/* Action Buttons */}
@@ -299,18 +304,18 @@ export default function Footer() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{ duration: 0.55, delay: 0.25 }}
-                className="mt-8 flex flex-wrap items-center gap-4"
+                className="mt-6 flex flex-wrap items-center gap-3.5"
               >
                 <Link
                   href="#contact"
-                  className="rounded-full border border-[#1f4638] bg-transparent px-7 py-3.5 text-sm sm:text-base font-semibold text-[#1f4638] transition-all duration-300 hover:bg-[#1f4638] hover:text-white hover:scale-105"
+                  className="rounded-full border border-[#1f4638] bg-transparent px-5 py-2.5 text-xs sm:text-sm font-semibold text-[#1f4638] transition-all duration-300 hover:bg-[#1f4638] hover:text-white hover:scale-105"
                 >
                   Have a question?
                 </Link>
 
                 <Link
                   href="#contact"
-                  className="rounded-full bg-[#1f4638] px-8 py-3.5 text-sm sm:text-base font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#16362b] hover:shadow-xl hover:-translate-y-0.5 hover:scale-105"
+                  className="rounded-full bg-[#1f4638] px-6 py-2.5 text-xs sm:text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-[#16362b] hover:shadow-xl hover:-translate-y-0.5 hover:scale-105"
                 >
                   Let's Start
                 </Link>
@@ -327,10 +332,10 @@ export default function Footer() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-white/70 pt-2"
+          className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-normal text-white/70 pt-2"
         >
-          <p>© Consultant W. All Rights Reserved. Licensing</p>
-          <p>Template by wCopilot Powered by Webflow</p>
+          <p>© Rafa & Company. All Rights Reserved. Chartered Accountants & Financial Consultants</p>
+          <p>Strategic Financial Advisory</p>
         </motion.div>
       </div>
     </footer>

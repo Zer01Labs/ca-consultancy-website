@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, Playfair_Display } from 'next/font/google';
+import { Poppins, Playfair_Display } from 'next/font/google';
 import './globals.css';
+import SmoothScroll from '@/components/SmoothScroll';
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const poppins = Poppins({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 const playfairDisplay = Playfair_Display({
@@ -18,9 +19,9 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Consultant W - Strategic Advisory & Business Consulting',
+  title: 'Rafa & Company - Chartered Accountants & Financial Advisory',
   description:
-    'At Consultant W, we embrace innovation as the driving force behind every solution. Premium business consulting services for your growth.',
+    'Comprehensive tax planning, statutory auditing, GST compliance, and strategic Virtual CFO services by experienced Chartered Accountants.',
 };
 
 export default function RootLayout({
@@ -29,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} ${playfairDisplay.variable} scroll-smooth`}>
+    <html lang="en" className={`${poppins.variable} ${playfairDisplay.variable} scroll-smooth`}>
       <body className="min-h-screen bg-[#f5f4f0] text-[#39413e] font-sans antialiased selection:bg-[#68e9ba] selection:text-[#1f4638]">
-        {children}
+        <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>
   );

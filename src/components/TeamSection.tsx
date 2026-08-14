@@ -6,33 +6,33 @@ import { Share2 } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: 'Samantha Carson',
-    role: 'CoFounder',
+    name: 'Samantha Carson, FCA',
+    role: 'Managing Partner & Senior CA',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
   },
   {
-    name: 'Marcus Knight',
-    role: 'Resources Consultant',
+    name: 'Marcus Knight, CA',
+    role: 'Head of Tax & GST Advisory',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
   },
   {
-    name: 'Sophia Rivers',
-    role: 'Chief Consultant',
+    name: 'Sophia Rivers, FCA',
+    role: 'Statutory Audit Partner',
     image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
   },
   {
-    name: 'Isabella Stone',
-    role: 'Strategy Consultant',
+    name: 'Isabella Stone, CA',
+    role: 'Corporate Law & Legal Specialist',
     image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=600&q=80',
   },
   {
-    name: 'Gabriel North',
-    role: 'Research Strategist',
+    name: 'Gabriel North, CFA',
+    role: 'Virtual CFO Advisory Lead',
     image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
   },
   {
-    name: 'Olivia Chen',
-    role: 'Finance Lead',
+    name: 'Olivia Chen, CA',
+    role: 'Financial Audit & Assurance Lead',
     image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
   },
 ];
@@ -126,8 +126,8 @@ export default function TeamSection() {
           </div>
         </div>
         <div>
-          <h3 className="text-[22px] font-semibold text-[#39413e]">{member.name}</h3>
-          <p className="text-[15px] font-serif-accent italic text-[#1d7a58] mt-1">{member.role}</p>
+          <h3 className="text-lg font-semibold text-[#39413e]">{member.name}</h3>
+          <p className="text-xs sm:text-sm font-serif-accent italic text-[#1d7a58] mt-0.5">{member.role}</p>
         </div>
       </div>
     );
@@ -136,7 +136,7 @@ export default function TeamSection() {
   return (
     <section id="team" className="bg-white border-t border-gray-200 overflow-hidden w-full">
       {/* 4 equal columns grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 min-h-[580px] w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 min-h-[540px] w-full">
 
         {/* Column 0 */}
         <div className="border-r border-gray-200 relative overflow-hidden hidden xl:block">
@@ -175,28 +175,27 @@ export default function TeamSection() {
         </div>
 
         {/* Column 2: Fixed Text Box */}
-        <div className="border-r border-gray-200 bg-white z-10 relative flex flex-col justify-center p-10 lg:p-14">
+        <div className="border-r border-gray-200 bg-white z-10 relative flex flex-col justify-center p-8 lg:p-12">
           <div>
-            <h2 className="text-4xl lg:text-[44px] font-bold text-[#39413e] leading-[1.15]">
-              Meet The<br />
-              <span className="font-serif-accent italic text-[#1d7a58]">Genius Team</span>
+            <h2 className="text-2xl lg:text-3xl font-semibold text-[#39413e] leading-tight">
+              Meet Our<br />
+              <span className="font-serif-accent font-normal italic text-[#1d7a58]">Expert CAs</span>
             </h2>
-            <p className="mt-6 text-[#75736b] text-[15px] leading-[1.7] max-w-[280px]">
-              Explore the brilliance and expertise that power Consultant W. Get to know our team
-              of dedicated professionals committed to guiding your business toward success.
+            <p className="mt-4 text-[#75736b] text-sm leading-relaxed max-w-[280px] font-normal">
+              Discover the financial leadership and technical expertise powering Rafa & Company. Our team of dedicated Chartered Accountants and tax advisors is committed to securing your financial future.
             </p>
           </div>
 
-          <div className="flex items-center gap-6 mt-14">
+          <div className="flex items-center gap-6 mt-10">
             <button
               onClick={prev}
-              className="flex items-center gap-2 text-[#75736b] hover:text-[#39413e] font-semibold text-[13px] uppercase tracking-wider transition-colors group"
+              className="flex items-center gap-2 text-[#75736b] hover:text-[#39413e] font-medium text-xs uppercase tracking-wider transition-colors group"
             >
               <span className="group-hover:-translate-x-1 transition-transform">←</span> Prev
             </button>
             <button
               onClick={next}
-              className="flex items-center gap-2 text-[#39413e] hover:text-[#1d7a58] font-semibold text-[13px] uppercase tracking-wider transition-colors group"
+              className="flex items-center gap-2 text-[#39413e] hover:text-[#1d7a58] font-medium text-xs uppercase tracking-wider transition-colors group"
             >
               Next <span className="group-hover:translate-x-1 transition-transform">→</span>
             </button>

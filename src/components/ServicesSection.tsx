@@ -7,16 +7,20 @@ import { ArrowRight } from 'lucide-react';
 
 const servicesList = [
   {
-    id: 'strategic-planning',
-    title: 'Strategic Planning',
+    id: 'tax-planning-compliance',
+    title: 'Income Tax & GST Compliance',
   },
   {
-    id: 'business-development',
-    title: 'Business Development',
+    id: 'statutory-audit',
+    title: 'Statutory & Financial Auditing',
   },
   {
-    id: 'change-management',
-    title: 'Change Management',
+    id: 'corporate-cfo-advisory',
+    title: 'Virtual CFO & Strategic Advisory',
+  },
+  {
+    id: 'company-incorporation',
+    title: 'Company Incorporation & ROC Filings',
   },
 ];
 
@@ -25,19 +29,19 @@ export default function ServicesSection() {
   const [hoveredService, setHoveredService] = useState<string | null>(null);
 
   return (
-    <section id="services" className="py-24 bg-white text-[#39413e] relative overflow-hidden border-t border-black/5">
+    <section id="services" className="py-16 sm:py-20 bg-white text-[#39413e] relative overflow-hidden border-t border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.1fr] gap-10 lg:gap-16 items-center">
 
           {/* Left Column: Text & Service Links */}
           <div className="flex flex-col">
-            <h2 className="text-4xl sm:text-5xl lg:text-[52px] font-bold text-[#39413e] mb-6 leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#39413e] mb-4 leading-tight">
               Explore Our<br />
-              <span className="font-serif-accent italic text-[#1d7a58]">Best Service</span>
+              <span className="font-serif-accent font-normal italic text-[#1d7a58]">CA Services</span>
             </h2>
-            <p className="text-[#75736b] text-[17px] leading-[1.8] max-w-[420px] mb-12">
-              Our best services are meticulously crafted to provide optimal solutions tailored to your unique business needs. Elevate your strategies with Consultant W.
+            <p className="text-[#75736b] text-sm sm:text-base leading-relaxed max-w-[420px] mb-8 font-normal">
+              Our financial and tax advisory services are meticulously crafted to ensure statutory compliance, optimize tax efficiency, and support sustainable business growth with Rafa & Company.
             </p>
 
             <div className="flex flex-col border-t border-gray-200" onMouseLeave={() => setHoveredService(null)}>
@@ -52,30 +56,30 @@ export default function ServicesSection() {
                       setActiveService(service.id);
                       setHoveredService(service.id);
                     }}
-                    className={`group cursor-pointer border-b border-gray-200 py-6 px-4 flex items-center justify-between transition-all duration-300 ${
+                    className={`group cursor-pointer border-b border-gray-200 py-4 px-3 flex items-center justify-between transition-all duration-300 ${
                       isActive || isHovered
                         ? 'bg-gradient-to-r from-[#68e9ba]/25 to-transparent'
                         : 'bg-transparent'
                     }`}
                   >
-                    <h3 className={`text-[20px] font-semibold transition-colors ${isActive ? 'text-[#1d7a58]' : 'text-[#39413e]'}`}>
+                    <h3 className={`text-base sm:text-lg font-semibold transition-colors ${isActive ? 'text-[#1d7a58]' : 'text-[#39413e]'}`}>
                       {service.title}
                     </h3>
                     <motion.div
                       animate={{ x: isHovered ? 4 : 0 }}
                       className="text-[#1d7a58]"
                     >
-                      <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
+                      <ArrowRight className="w-4 h-4" strokeWidth={2.5} />
                     </motion.div>
                   </Link>
                 );
               })}
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6">
               <Link
                 href="#contact"
-                className="btn-webflow-mint inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-sm shadow-md hover:shadow-lg transition-all"
+                className="btn-webflow-mint inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-xs sm:text-sm shadow-md hover:shadow-lg transition-all"
               >
                 Inquire About {servicesList.find((s) => s.id === activeService)?.title || 'Services'} <ArrowRight className="w-4 h-4" />
               </Link>
@@ -101,3 +105,4 @@ export default function ServicesSection() {
     </section>
   );
 }
+

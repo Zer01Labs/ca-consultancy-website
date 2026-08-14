@@ -58,10 +58,7 @@ export default function BlogPage() {
             </p>
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert('Thank you for subscribing to Consultant W Strategic Briefings!');
-              }}
+              action="#"
               className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
             >
               <input
